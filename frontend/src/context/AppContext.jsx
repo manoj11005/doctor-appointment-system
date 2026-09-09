@@ -44,6 +44,35 @@ const AppContextProvider = (props) => {
     }
   };
 
+
+//   const loadUserProfileData = async () => {
+//   try {
+//     const { data } = await axios.get(
+//       backendUrl + "/api/user/get-profile",
+//       {
+//         headers: { token },
+//       }
+//     );
+
+//     if (data.success) {
+//       setUserData(data.user);
+//     } else {
+//       toast.error(data.message);
+//     }
+//   } catch (error) {
+//     console.log(error);
+
+//     // Invalid/expired token
+//     if (error.response?.status === 401) {
+//       localStorage.removeItem("token");
+//       setToken(false);
+//       setUserData(false);
+//     }
+
+//     toast.error(error.message);
+//   }
+// };
+
   const value = {
     doctors,
     getDoctorsData,
